@@ -68,6 +68,9 @@ Getting Service Broker back on track can seem like a daunting task, because ther
 
 The following steps can be followed to get Service Broker working again in the event that a problem arises.
 
+    #. EXEC opsstream.spsysServiceBrokerMessageCounts
+    Minimally invasive / read-only.  Peek at the number of conversations in the Service Broker queues.  Note that this returns "Conversation Counts".  Conversations from completed messages are not immediately purged...so these counts do not always reflect the actual number of unprocessed messages in queue.  Still, this will give you an idea of the volume of messages.
+    
     #. EXEC opsstream.spsysServiceBrokerReset @HardReset = 0, @ClearMessages = 0
     Minimally invasive.  Simply stops and restarts each queue.  Will not delete any messages, and will not disrupt any users or any aspects of the system.
     
