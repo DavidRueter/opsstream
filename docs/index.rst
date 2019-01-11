@@ -6,8 +6,7 @@ Markdown files:
 .. toctree::
    :glob:
 
-   Database Overview 61c994d1.md
-   Microsoft SQL Platform 988e2a25.md
+   index
 
 RST files:
 
